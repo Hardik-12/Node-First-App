@@ -1,0 +1,28 @@
+# What is node.js
+# ----------------
+# Node.js is a javascript runtime that allows javascript code to run on the server. It leverages the chrome v8 engine for a executing and interpreting javascript code.
+
+
+# Node.js role(in web development)
+# ---------------------------------
+# create server and listen to incoming requests
+# handle requests, input validation and connect to database
+# return responses(html, json, xml)
+
+
+# core modules that ships with node.js
+# ------------------------------------
+
+# http--Launches a server and send requests
+# https--launches a ssl server
+# path
+# fs
+# os
+
+
+# node.js program life cycle
+# ---------------------------
+# node app.js --> starts script --> parse code and register variables and functions --> event loop(Keeps on running as long as events are registered)
+
+
+
