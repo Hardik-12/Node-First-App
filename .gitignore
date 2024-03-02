@@ -26,3 +26,31 @@
 
 
 
+# node.js event driven architecture
+# ----------------------------------
+
+# event loop: event loop is at the core of node.js. It is a continously running process that checks the event queue for new events and execute associated callback functions.
+
+# callbacks: callbacks are executed when the operation is complete.These are the associated functions which are executed after the operation is complete.
+
+# Event queue: When an event occurs, the associated callback function is placed in the event queue. The event loop continuously checks the event queue for pending events and executes the corresponding callback functions in a FIFO (First-In-First-Out) manner.
+
+
+# How incoming requests are handled in node.js
+# ---------------------------------------------
+
+# incoming requests                     |---> Event loop(Handle event callbacks)
+#        /|\                            | 
+#  your code  single javascript thread---fs--Send to worker pool--> Different threads
+
+
+# Event loop
+# ----------
+# As the event loop runs first of all it checks the timers i.e. setInterval or setTimeOut callbacks.
+# Then it checks for pending callbacks (execute I/O related callbacks that were deferred)
+# Then it enters the poll phase(retrieve new I/O events and execute their callbacks).It can jump to the first phase in case of setimeout and setInterval.
+# After that it enters into check phase (execute setimmediate() callbacks)
+# And the final phase is close callbacks(execute all close event callbacks)
+
+
+# After res.end() we cannot send a response
