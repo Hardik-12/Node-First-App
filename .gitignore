@@ -1,3 +1,5 @@
+# Section 1
+# ------------
 # What is node.js
 # ----------------
 # Node.js is a javascript runtime that allows javascript code to run on the server. It leverages the chrome v8 engine for a executing and interpreting javascript code.
@@ -54,3 +56,17 @@
 
 
 # After res.end() we cannot send a response
+
+
+# Section 2(Improved development and debugging)
+# ----------
+# npm stands for node package manager which is used to install packages.It is already installed with node.js.
+# start is a special script which is a reserved keyword and should be named as start
+# If you choose your specific name then you should have to start your script as npm run (script-name)
+
+# There are two types of node packages which are stated as core packages and third party packages.These packages live in npm repository such as express.js, body-parser.
+
+# for installing packages we can install them as production dependency or development dependency.
+# for development dependency we can use for example npm install nodemon --save-dev and for production npm install nodemon --save
+
+# package.json consists of project metadata like project name, description, project author etc while package-lock.json locks the exact versions of dependencies and their dependencies.
